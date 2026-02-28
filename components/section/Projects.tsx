@@ -89,7 +89,7 @@ const Projects: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className='group relative border-b border-gray-800 py-12 md:py-16 transition-colors hover:border-[#ccff00]/30'
+              className='group relative border-b border-gray-800 py-8 md:py-12 lg:py-16 transition-colors hover:border-[#ccff00]/30'
               onMouseEnter={() => setActiveProject(project.id)}
               onMouseLeave={() => setActiveProject(null)}>
               <a
@@ -97,19 +97,19 @@ const Projects: React.FC = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='block'>
-                <div className='flex flex-col md:flex-row md:items-center justify-between relative z-10'>
-                  <h3 className='text-4xl md:text-6xl lg:text-7xl font-bold text-[#e0e0e0] group-hover:text-[#ccff00] transition-colors duration-300'>
+                <div className='flex flex-col md:flex-row md:items-center justify-between relative z-10 gap-4 md:gap-0'>
+                  <h3 className='text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold text-[#e0e0e0] group-hover:text-[#ccff00] transition-colors duration-300'>
                     {project.title}
                   </h3>
-                  <div className='flex flex-col md:items-end mt-4 md:mt-0'>
-                    <span className='text-sm font-mono text-gray-500 mb-1 group-hover:text-white transition-colors'>
+                  <div className='flex flex-col md:items-end mt-2 md:mt-0'>
+                    <span className='text-xs md:text-sm font-mono text-gray-500 mb-2 group-hover:text-white transition-colors'>
                       {project.category}
                     </span>
-                    <div className='flex gap-2'>
+                    <div className='flex flex-wrap gap-2'>
                       {project.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className='text-xs border border-gray-800 rounded-full px-2 py-1 text-gray-600 group-hover:border-[#ccff00] group-hover:text-[#ccff00] transition-all'>
+                          className='text-[10px] md:text-xs border border-gray-800 rounded-full px-2 py-1 text-gray-600 group-hover:border-[#ccff00] group-hover:text-[#ccff00] transition-all'>
                           {tag}
                         </span>
                       ))}

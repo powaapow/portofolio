@@ -35,9 +35,9 @@ const Intro: React.FC = () => {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            className="overflow-hidden"
+            className="overflow-hidden w-full text-center md:text-left"
           >
-            <h1 className='text-[12vw] md:text-[10vw] font-bold leading-[0.85] tracking-tighter text-white mix-blend-difference hover:text-transparent hover:text-outline-hover transition-colors duration-500'>
+            <h1 className='text-[15vw] md:text-[10vw] font-bold leading-[0.85] tracking-tighter text-white mix-blend-difference hover:text-transparent hover:text-outline-hover transition-colors duration-500'>
               MOCHAMMAD
             </h1>
           </motion.div>
@@ -46,14 +46,14 @@ const Intro: React.FC = () => {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-            className="overflow-hidden"
+            className="overflow-hidden w-full text-center md:text-right"
           >
-            <h1 className='text-[12vw] md:text-[10vw] font-bold leading-[0.85] tracking-tighter text-white mix-blend-difference text-right self-end ml-auto hover:text-transparent hover:text-outline-hover transition-colors duration-500'>
+            <h1 className='text-[15vw] md:text-[10vw] font-bold leading-[0.85] tracking-tighter text-white mix-blend-difference hover:text-transparent hover:text-outline-hover transition-colors duration-500'>
               FAUZAN
             </h1>
           </motion.div>
 
-          <div className='flex flex-col md:flex-row justify-between w-full mt-12 md:mt-24 px-2'>
+          <div className='flex flex-col md:flex-row justify-between w-full mt-12 md:mt-24 px-2 items-center md:items-start text-center md:text-left gap-8 md:gap-0'>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -68,7 +68,7 @@ const Intro: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
-              className='text-sm md:text-base font-mono text-gray-400 text-right mt-8 md:mt-0'
+              className='text-sm md:text-base font-mono text-gray-400 text-center md:text-right mt-0'
             >
               <p>SCROLL TO EXPLORE</p>
               <motion.div 

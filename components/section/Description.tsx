@@ -7,7 +7,7 @@ const Description: React.FC = () => {
     <section className='min-h-screen flex items-center justify-center bg-[#0a0a0a] py-32 relative'>
       <div className='container mx-auto px-4 md:px-8 relative z-10'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start'>
-          <div className='lg:col-span-4'>
+          <div className='lg:col-span-4 order-2 lg:order-1'>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ const Description: React.FC = () => {
             </motion.div>
           </div>
 
-          <div className='lg:col-span-8'>
+          <div className='lg:col-span-8 order-1 lg:order-2'>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ const Description: React.FC = () => {
               </motion.p>
             </div>
 
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-12 border-t border-gray-800'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-16 md:mt-24 pt-12 border-t border-gray-800'>
               {[
                 { label: 'Experience', value: '3+ Years' },
                 { label: 'Projects', value: '10+' },
@@ -73,8 +73,8 @@ const Description: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
                   viewport={{ once: true }}>
-                  <h4 className='text-3xl md:text-4xl font-bold text-white mb-2'>{item.value}</h4>
-                  <p className='text-xs font-mono text-gray-500 uppercase'>{item.label}</p>
+                  <h4 className='text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2'>{item.value}</h4>
+                  <p className='text-[10px] md:text-xs font-mono text-gray-500 uppercase'>{item.label}</p>
                 </motion.div>
               ))}
             </div>

@@ -43,7 +43,7 @@ const Certification: React.FC = () => {
           <h2 className='text-xs font-mono text-[#ccff00] uppercase tracking-widest mb-8'>( Certifications )</h2>
         </motion.div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
           {certifications.map((cert, index) => (
             <motion.div 
               key={index}
@@ -51,14 +51,14 @@ const Certification: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className='p-8 border border-gray-800 hover:border-[#ccff00]/30 transition-colors group'
+              className='p-6 md:p-8 border border-gray-800 hover:border-[#ccff00]/30 transition-colors group'
             >
               <div className='flex justify-between items-start mb-4'>
-                <span className='text-xs font-mono text-[#ccff00]'>{cert.date}</span>
-                <span className='text-xs font-mono text-gray-500'>{cert.issuer}</span>
+                <span className='text-[10px] md:text-xs font-mono text-[#ccff00]'>{cert.date}</span>
+                <span className='text-[10px] md:text-xs font-mono text-gray-500 text-right ml-2'>{cert.issuer}</span>
               </div>
-              <h3 className='text-xl font-bold text-[#e0e0e0] mb-3 group-hover:text-[#ccff00] transition-colors'>{cert.title}</h3>
-              <p className='text-sm text-gray-400 leading-relaxed'>{cert.description}</p>
+              <h3 className='text-lg md:text-xl font-bold text-[#e0e0e0] mb-3 group-hover:text-[#ccff00] transition-colors'>{cert.title}</h3>
+              <p className='text-xs md:text-sm text-gray-400 leading-relaxed'>{cert.description}</p>
             </motion.div>
           ))}
         </div>
